@@ -1,0 +1,79 @@
+// variable scss
+@import "../../../theme/variables.scss";
+
+.header {
+    background: $bgPrimary;
+    color: $textSecondary;
+    font-weight: bold;
+}
+
+.sub-header {
+    padding: 5px 10px;
+    font-weight: bold;
+    border-bottom: 2px solid gainsboro;
+}
+
+.total-price-item {
+    font-weight: bold;
+    color: $textBlack;
+    font-size: 14px;
+}
+
+.cart-img {
+    margin: 0 10px 0 0;
+    width: 70px;
+    height: 70px;
+}
+
+.minus,
+.plus {
+    width: 60px;
+    cursor: pointer;
+    height: 20px;
+    background: #045546;
+    border-radius: 4px;
+    margin: 4px auto;
+    padding-top: 0px;
+    border: 1px solid #045546;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    color: #FFF;
+}
+
+.quantity {
+    .number {
+        display: grid;
+        justify-items: center;
+    }
+
+    .input-quantity {
+        height: 30px;
+        width: 60px;
+        text-align: center;
+        font-size: 20px;
+        border: 1px solid #045546;
+        border-radius: 4px;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 4px;
+    }
+}
+
+.single-item {
+    margin-top: 8px;
+    width: 100%;
+}
+
+
+.text-center {
+    display: block;
+    margin: auto;
+    // margin-top: 5rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.footer-md::before {
+    background-image: none !important
+}

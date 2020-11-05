@@ -1,0 +1,30 @@
+<ion-content class="ionic-welcome-page-section ion-content-back">
+  <div class="opacity-0">
+    <ion-slides #slides pager="false" [options]="slideOpts">
+      <ion-slide>
+        <ion-row class="ion-justify-content-center">
+          <div class="title text-uppercase text-secondary">
+            welcome to
+          </div>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <div class="logo">
+            <img src="../../../assets/image/logo.png">
+            <h3 class="font-weight-bold text-uppercase text-secondary font-weight-bold">KiranaPost</h3>
+            <h4>#No.1 Wholesaler</h4>
+          </div>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <div class="arrow text-secondary" (click)="skipStep()">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+        </ion-row>
+        <!-- <ion-row class="ion-justify-content-center">
+          <div class="text-dark skip" (click)="skipStep()">
+            skip
+          </div>
+        </ion-row> -->
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

@@ -1,0 +1,76 @@
+//variables 
+@import "../../../theme/variables.scss";
+ion-content{
+    img.img-src {
+        width: 60% !important;
+        height: 30vh;
+        display: block;
+        margin: auto;
+    }
+    --background: #ceffef;
+    ion-item{
+        --background: #ceffef;
+    }
+    .logo{
+        margin-top: 100px;
+        img{
+           width: 100%;
+            padding: 0px 30px;
+        }
+    }
+    .forgot{
+        color: $textSecondary;
+        font-weight: bold;
+    }
+    .input{
+        display: block;
+        margin: 10% 10%;
+    }
+    .eye{
+        color: $textSecondary;
+        position: absolute;
+        top: 25px;
+        right: 0;
+        z-index: 9999999;
+    }
+    .login-btn{
+        padding:0 !important;
+        --box-shadow: 1px 2px 4px 1px #d2d2d2;
+    }
+    ion-label{
+        color: $textSecondary;
+    }
+    .red{
+        color: red;
+    }
+    // h4 {
+    //     width: 100%; 
+    //     text-align: center; 
+    //     border-bottom: 1px solid $text-grey; 
+    //     line-height: 0.1em;
+    //     margin: 20px 0 20px; 
+    // } 
+    // h4 span { 
+    //     background:$text-white; 
+    //     padding:0 30px; 
+    // }
+}
+
+.footer{
+    bottom: 16px;
+    position: absolute;
+    text-align: center;
+    color: $textSecondary;
+    a{
+        color: $textSecondary;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+
+.error-message {
+    color: red !important;
+    text-align: left;
+    margin-top: 5pt;
+    font-size: 12px;
+}

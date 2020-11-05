@@ -1,0 +1,18 @@
+// variable scss
+@import "../../../theme/variables.scss";
+
+ion-thumbnail {
+    margin: 10px 5px;
+    img{
+        border-radius: 100px;
+    }
+}
+ion-card{
+    box-shadow: none;
+    border: 1px solid;
+    margin: 10px;
+    ion-card-content{
+        margin: 0;
+        padding: 10px;
+    }
+}

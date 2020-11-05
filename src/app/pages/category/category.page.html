@@ -1,0 +1,20 @@
+<app-header search="YES" (handleSearch)="searchData($event)"></app-header>
+<ion-content [fullscreen]="true">
+  <div class="cards">
+    <ion-row class="ion-margin">
+      <ion-col size="6" *ngFor="let categoryItems of this.allCategoriesData" (click)="getproductList(categoryItems)">
+        <ion-card>
+          <div class="product-card">
+            <!-- <div class="badge">Hot</div> -->
+            <div class="product-tumb">
+              <img src={{categoryItems.category_image}} alt="icon">
+            </div>
+            <div class="product-details">
+              <h5 class="text-center">{{categoryItems.Subcategory_name}}</h5>
+            </div>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

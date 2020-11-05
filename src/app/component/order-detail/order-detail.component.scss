@@ -1,0 +1,28 @@
+// variable scss
+@import "../../../theme/variables.scss";
+
+.header{
+    border-bottom: 1PX solid gainsboro;
+    ion-icon{
+        margin-left: 10px;
+        font-size: 22px;
+    }
+    a{
+        color: $textBlack;
+    }
+    ion-col{
+        
+    margin: 10px 0;
+    padding: 5px;
+    }
+}
+.after-header{
+    background-color: $bgWhite;
+}
+.back-icon{
+    width: 20px;
+}
+.single-item{
+    margin-top: 8px;
+    width: 100%;
+}

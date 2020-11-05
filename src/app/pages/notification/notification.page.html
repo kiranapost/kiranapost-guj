@@ -1,0 +1,28 @@
+<app-header search="YES" (handleSearch)="searchData($event)"></app-header>
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-card>
+    <ion-item>
+      <ion-thumbnail slot="start" class="cart-img">
+        <img src="../../../assets/image/users/alpesh.jpg">
+      </ion-thumbnail>
+      <ion-card-content>
+        Alpesh Kirna Store Create new Order Successfully
+      </ion-card-content>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-thumbnail slot="start" class="cart-img">
+        <img src="../../../assets/image/users/soyab.jpg">
+      </ion-thumbnail>
+      <ion-card-content>
+        Classic Store Order Deliverd Successfully
+      </ion-card-content>
+    </ion-item>
+  </ion-card>
+</ion-content>

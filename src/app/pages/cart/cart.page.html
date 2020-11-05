@@ -1,0 +1,62 @@
+<app-header search="YES" (handleSearch)="searchData($event)"></app-header>
+<ion-content>
+    <ion-row class="header ion-align-items-center">
+        <ion-col>
+            <h5 class="p-0 m-0 title">તમારી વસ્તુ</h5>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col class="text-left sub-header">
+            {{this.allCartItems.length}} વસ્તુ | કુલ વસ્તુ : {{this.total_quantity}}
+        </ion-col>
+        <ion-col class="text-right sub-header">
+            કુલ ભાવ : <span class="font-weight-bold"></span>&#8377; {{this.total_amount}}
+        </ion-col>
+    </ion-row>
+    <div *ngIf="this.allCartItems.length>0">
+        <ion-row *ngFor="let allItems of this.allCartItems">
+            <ion-item class="single-item">
+                <ion-thumbnail slot="start" class="cart-img">
+                    <img src="{{allItems.product_base_img}}">
+                </ion-thumbnail>
+                <ion-label>
+                    <h2>{{allItems.product_name}}</h2>
+                    <!-- <p>Total Kg : 400Kg</p> -->
+                    <p> વસ્તુ : {{allItems.quantity}}</p>
+                    <p >ભાવ : &#8377;{{allItems.product_price}} </p>
+                        <p class="total-price-item">કુલ =  &#8377;{{allItems.quantity*allItems.product_price}}</p>
+                </ion-label>
+                <div class="quantity">
+                    <div class="number">
+                        <span class="minus" (click)="decrementQty(allItems)">-</span>
+                        <span class="input-quantity">{{allItems.quantity}}</span>
+                        <span class="plus" (click)="incrementQty(allItems)">+</span>
+                    </div>
+                </div>
+
+                <div item-right>
+                    <span (click)="deleteOneItem(allItems)">
+                  <ion-icon style="color: #dc0424;font-size: 1.7rem;" name="trash"></ion-icon>
+                </span>
+                </div>
+            </ion-item>
+        </ion-row>
+    </div>
+    <div class="text-center" *ngIf="this.allCartItems.length==0">
+        કોઇ વસ્તુ ઉમેરેલ નથી
+    </div>
+</ion-content>
+<ion-footer class="io-padding" no-lines>
+    <ion-row class="text-center" >
+        <ion-col (click)="addMoreOrder()">
+            <ion-button fill="outline" color="secondary">
+                <ion-icon name="add-circle-outline"></ion-icon><b> બીજી વસ્તુ ઉમેરો</b>
+            </ion-button>
+        </ion-col>
+        <ion-col>
+            <ion-button color="secondary" (click)="presentAlertConfirm()">
+                <ion-icon name="cart"></ion-icon>ર્ઓર્ડર કરો.
+            </ion-button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

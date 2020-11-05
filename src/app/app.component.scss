@@ -1,0 +1,61 @@
+// variable scss
+@import "../theme/variables.scss";
+
+ion-menu {
+    ion-toolbar {
+        border-bottom: 1px solid $textBlack;
+        --background: #83ffd8 !important;
+        color: $textBlack;
+        padding: 20px;
+
+        .profile-pic-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            display: block;
+            margin: auto;
+        }
+
+        .profile-name {
+            margin: 5px auto;
+        }
+    }
+
+    ion-content {
+        --background: #83ffd8 !important;
+
+        .ion-list {
+            margin: 0 !important;
+            background: transparent !important;
+
+            ion-item {
+                border-bottom: 1px solid $textBlack !important;
+                color: $textBlack !important;
+                --background: #83ffd8 !important;
+                --border-color: transparent !important;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        }
+    }
+}
+ion-icon {
+    color: $textBlack !important;
+}
+
+.error-message {
+    color: red !important;
+    text-align: left;
+    margin-top: 5pt;
+    font-size: 12px;
+}
+
+
+:root {
+    --ion-color-secondary: red;
+    --ion-color-secondary-rgb: 0,102,0;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255,255,255;
+    --ion-color-secondary-shade: #005a00;
+    --ion-color-secondary-tint: #1a751a;
+  }

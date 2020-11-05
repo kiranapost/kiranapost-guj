@@ -1,0 +1,43 @@
+<app-header></app-header>
+<ion-content>
+  <ion-row class="container">
+    <ion-row>
+      <ion-col>
+        <h2 class="title">પ્રોફાઈલ</h2>
+      </ion-col>
+    </ion-row>
+    <div class="line">
+      <ion-row class="profile">
+        <ion-col class="ion-text-center">
+          <img class="profile-pic" alt="profile" src="{{this.userData.profile_pic}}">
+          <!-- <a >Change</a> -->
+        </ion-col>
+        <ion-col size="8">
+          <h2>{{this.userData.first_name}} </h2>
+          <h5> {{this.userData.last_name}}</h5>
+          <h6>{{this.userData.email}}</h6>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- <ion-row class="data">
+      <ion-col size="12">
+        <label>ગામ/શહેર</label>
+      </ion-col>
+      <ion-col size="12">
+        <span class="value">Timbi</span>
+      </ion-col>
+    </ion-row> -->
+    <ion-row class="data">
+      <ion-col size="12">
+        <label>સરનામુ</label>
+      </ion-col>
+      <ion-col size="12">
+        <span class="value">
+          <p class="m-0">
+           {{this.userData.address}}
+          </p>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+</ion-content>

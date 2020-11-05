@@ -1,0 +1,43 @@
+<ion-menu side="start" type="overlay" menuId="sidemenu" contentId="content">
+  <ion-toolbar class="new-background-color">
+    <ion-row class="profile-pic text-center" justify-content-center class="mb-6">
+      <img src="{{this.profileImage}}" alt="" class="profile-pic-img" />
+    </ion-row>
+    <ion-text>
+      <div class="profile-name ion-text-center" *ngIf="this.userInfo!='' " >
+        {{this.userInfo.first_name}}<!--  {{this.userInfo.last_name}} -->
+      </div>
+    </ion-text>
+  </ion-toolbar>
+  <ion-content class="ion-content">
+    <ion-list class="ion-list">
+      <ion-item (click)="menuClose()" [routerLink]="['/app/tabs/home']" class="ion-item">
+        <ion-icon name="home"></ion-icon>&nbsp;&nbsp;હોમ
+      </ion-item>
+      <ion-item (click)="menuClose()" [routerLink]="['/app/tabs/today-price']" class="ion-item">
+        <ion-icon name="logo-usd"></ion-icon>&nbsp;&nbsp;આજનો ભાવ
+      </ion-item>
+      <ion-item (click)="menuClose()" [routerLink]="['/app/tabs/order']" class="ion-item">
+        <ion-icon name="newspaper-outline"></ion-icon>&nbsp;&nbsp;તમારા ર્ઓર્ડર
+      </ion-item>
+      <ion-item (click)="menuClose()" [routerLink]="['/cart']" class="ion-item">
+        <ion-icon name="cart"></ion-icon>&nbsp;&nbsp;માય કાર્ટ
+      </ion-item>
+      <ion-item (click)="menuClose()" [routerLink]="['/users']" class="ion-item">
+        <ion-icon name="people"></ion-icon>&nbsp;&nbsp;હેપ્પી યુઝર્સ
+      </ion-item>
+      <ion-item (click)="menuClose()" [routerLink]="['/profile']" class="ion-item">
+        <ion-icon name="person"></ion-icon>&nbsp;&nbsp;પ્રોફાઇલ
+      </ion-item>
+      <ion-item (click)="menuClose()" [routerLink]="['/help']" class="ion-item">
+        <ion-icon name="information-circle-outline"></ion-icon>&nbsp;&nbsp;મદદ
+      </ion-item>
+      <ion-item (click)="doLogOut()" class="ion-item">
+        <ion-icon name="power"></ion-icon>&nbsp;&nbsp;લોગ આઉટ
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-app>
+  <ion-router-outlet id="content"></ion-router-outlet>
+</ion-app>

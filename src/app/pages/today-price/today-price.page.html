@@ -1,0 +1,58 @@
+<app-header search="YES" (handleSearch)="searchData($event)"></app-header>
+<ion-content>
+
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <ion-row class="header ion-align-items-center">
+        <ion-col class="text-left sub-header">
+            Y/S :ખરીદ કિમત 
+        </ion-col>
+        <ion-col class="text-right sub-header">
+            C/R : હાલ નો ભાવ
+        </ion-col>
+
+    </ion-row>
+    <!-- <ion-row class="ion-text-right">
+        <ion-col>
+            <h6 class="p-0 m-0 title">Update: <span class="time">8 aug | 8:00 AM</span></h6>
+        </ion-col>
+    </ion-row> -->
+    <ion-row class="ion-no-padding">
+        <ion-slides pager="false" [options]="slideOpts">
+            <ion-slide *ngFor="let todayprice of this.todayPrices" (click)="openItemDetails(todayprice)">
+                <ion-card>
+                    <div class="product-card">
+                        <div class="badge">Hot</div>
+                        <div class="product-tumb">
+                            <img src="{{todayprice.product_base_img}}" alt="icon">
+                            <h5 class="text-center">{{todayprice.Product_name}}</h5>
+                        </div>
+                        <div class="product-details">
+                            <p class="text-success font-weight-bold">C/R : &#8377;{{todayprice.current_price}}</p>
+                            <p class="text-info">Y/S : &#8377;{{todayprice.old_price}}</p>
+                        </div>
+                    </div>
+                </ion-card>
+            </ion-slide>
+        </ion-slides>
+    </ion-row>
+
+    <ion-row class="running-item">
+        <ion-card *ngFor="let todayprice of this.todayPrices" (click)="openItemDetails(todayprice)">
+            <div class="single-item">
+                <ion-thumbnail slot="start" class="prod-img">
+                    <img src="{{todayprice.product_base_img}}">
+                </ion-thumbnail>
+                <ion-label>
+                    <h2 class="font-weight-bold">{{todayprice.Product_name}}</h2>
+                    <p class="text-success font-weight-bold">C/R : &#8377;{{todayprice.current_price}}</p>
+                    <p class="text-info">Y/S : &#8377;{{todayprice.old_price}}</p>
+                </ion-label>
+            </div>
+        </ion-card>
+    </ion-row>
+</ion-content>

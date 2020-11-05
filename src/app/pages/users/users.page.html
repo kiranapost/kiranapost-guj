@@ -1,0 +1,22 @@
+<app-header search="YES" (handleSearch)="searchData($event)"></app-header>
+<ion-content>
+  <ion-row class="header ion-align-items-center">
+    <ion-col>
+      <h5 class="p-0 m-0 title">અમારી સાથે જોડાયેલા દુકાનદાર</h5>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let usersList of this.allUsersList">
+    <ion-item class="single-item">
+      <ion-thumbnail slot="start" class="cart-img">
+        <img src="{{this.usersList.profile_pic}}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{this.usersList.name}}</h2>
+        <p>Since : 2020</p>
+      </ion-label>
+      <!-- <ion-thumbnail slot="end" class="cart-img">
+        <img src="{{this.usersList.profile_pic}}">
+      </ion-thumbnail> -->
+    </ion-item>
+  </ion-row>
+</ion-content>

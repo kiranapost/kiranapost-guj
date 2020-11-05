@@ -1,0 +1,117 @@
+// variable scss
+@import "../../../theme/variables.scss";
+
+.header {
+    background: $bgPrimary;
+    color: $textSecondary;
+    font-weight: bold;
+}
+
+.sub-header {
+    padding: 5px 10px;
+    font-weight: bold;
+    border-bottom: 2px solid gainsboro;
+}
+
+.total-price-item {
+    font-weight: bold;
+    color: $textBlack;
+    font-size: 14px;
+}
+
+.cart-img {
+    margin: 0 10px 0 0;
+    width: 70px;
+    height: 70px;
+}
+
+.single-item {
+    margin-top: 8px;
+    width: 100%;
+}
+
+.buttons {
+    display: grid;
+}
+
+
+.pending-items {
+    background: #ee3535;
+    color: #FFFFFF;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+}
+
+.processing-items {
+    background: #E1D150;
+    color: #000000;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+}
+
+.shipping-items {
+    background: #4690C0;
+    color: #FFFFFF;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+}
+
+.delivery-items {
+    background: #027a1a;
+    color: #E5FDE6;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+}
+
+.delivered-items {
+    background: #027a1a;
+    color: #E5FDE6 !important;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+}
+
+
+.onhold-items {
+    background: #ffbf00;
+    color: #000000;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+}
+
+.pendingpayment-item {
+    background: #f71d1d;
+    color: #FFFFFF;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+}   
+
+.refund-items {
+    background: #00D3B4;
+    color: #000000;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+}   
+
+.complete-items {
+    background: #00FE08;
+    color: #000000;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+}   
+
+.cancel-items{
+    background: #cf142b;
+    color: #FFFFFF;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+}

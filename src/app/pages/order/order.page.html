@@ -1,0 +1,45 @@
+<app-header search="YES" (handleSearch)="searchData($event)"></app-header>
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+    refreshingText="Refreshing...">
+  </ion-refresher-content>
+  </ion-refresher>
+
+
+  <ion-row class="header ion-align-items-center">
+    <ion-col>
+      <h5 class="p-0 m-0 title">{{this.userData.address}}</h5>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngFor="let pastOrder of this.orderDetails">
+    <ion-item class="single-item">
+      <ion-label>
+        <p><span class="pending-items" *ngIf="(pastOrder.status=='pending')">&bull; {{pastOrder.status}}</span></p>
+        <p><span class="processing-items" *ngIf="(pastOrder.status=='processing')">&bull; {{pastOrder.status}}</span></p>
+        <p><span class="shipping-items" *ngIf="(pastOrder.status=='shipping')">&bull; {{pastOrder.status}}</span></p>
+        <p><span class="delivered-items" *ngIf="(pastOrder.status=='delivered')">&bull; {{pastOrder.status}}</span></p>
+        <p><span class="onhold-items" *ngIf="(pastOrder.status=='on_hold')">&bull; On Hold</span></p>
+        <p><span class="pendingpayment-item" *ngIf="(pastOrder.status=='pending_payment')">&bull; Pending Payment</span></p>
+        <p><span class="refund-items" *ngIf="(pastOrder.status=='refunded')">&bull; Refunded</span></p>
+        <p><span class="complete-items" *ngIf="(pastOrder.status=='completed')">&bull; {{pastOrder.status}}</span></p>
+        <p><span class="cancel-items" *ngIf="(pastOrder.status=='cancelled' || pastOrder.status=='canceled')">&bull; {{pastOrder.status}}</span></p>
+
+        <p>Order ID : {{pastOrder.id}}</p>
+        <p>{{pastOrder.created_at}}</p>
+        <p class="total-price-item">કુલ : &#8377;{{pastOrder.total}}</p>
+      </ion-label>
+      <div class="buttons" >
+        <ion-button *ngIf="(pastOrder.st_code!='1')" (click)="presentAlertConfirm(pastOrder)" color="secondary">
+          Cancel
+        </ion-button>
+      </div>
+      <div class="buttons">
+        <ion-button (click)="viewOrderDetail(pastOrder)" class="pending-item" clear>
+          ઓર્ડર જુવો
+        </ion-button>
+      </div>
+    </ion-item>
+  </ion-row>
+</ion-content>

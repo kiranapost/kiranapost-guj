@@ -1,0 +1,19 @@
+// variable scss
+@import "../../theme/variables.scss";
+
+ion-icon,ion-label{
+    color: $textSecondary;
+}
+ion-tab-button{
+    background-color: #FFF;
+    color: gray;
+}
+ion-tab-button.tab-selected{
+    ion-icon{
+        color: $textWhite;
+    }
+    ion-label{
+        color: $textWhite;
+    }
+    background-color: $bgSecondary;
+}

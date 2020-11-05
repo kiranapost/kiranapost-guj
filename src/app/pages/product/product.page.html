@@ -1,0 +1,29 @@
+<app-header search="YES" (handleSearch)="searchData($event)"></app-header>
+<ion-content [fullscreen]="true">
+  <div class="cards">
+    <ion-row class="ion-margin" >
+      <ion-col size="6" *ngFor="let productItems of this.allProductData" (click)="viewDetail(productItems)">
+        <ion-card>
+          <div class="product-card">
+            <div class="badge" *ngIf="(productItems.special_price!=null)">Hot</div>
+            <div class="product-tumb">
+              <img src="{{productItems.product_base_img}}" alt="icon">
+            </div>
+            <div class="product-details">
+              <h6 class="text-left">{{productItems.Product_name}}</h6>
+              <p class="text-right mr-4px">&#8377;{{productItems.selling_price}}</p>
+            </div>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngIf=isShow>
+    <div *ngIf="this.allProductData.length==0">
+      <span class="text-center">
+        હાલ મા આ વિભાગની કોઇ વસ્તુ હાજર નથી.
+      </span>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <!-- <div class="logo"> -->
+      <img class="logo" src="../../../assets/image/KiranaPost-01.png">
+      <!-- <p class="title">KiranaPost</p> -->
+    <!-- </div> -->
+    <ion-buttons [routerLink]="['/cart']" class="cart ion-no-padding" slot="end">
+      <ion-icon name="cart" color="light"></ion-icon><span class="cart-item">{{this.totalProductLength}}</span>
+    </ion-buttons>
+    <ion-buttons class="sidenav-btn ion-no-padding" slot="end">
+      <ion-menu-button class="ion-no-padding">
+        <ion-icon name="menu" color="light"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <!-- <ion-searchbar *ngIf="search == 'YES'" class="ion-no-padding" showCancelButton="never" (search)="searchData($event)">
+  </ion-searchbar> -->
+</ion-header>

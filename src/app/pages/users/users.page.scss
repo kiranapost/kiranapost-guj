@@ -1,0 +1,27 @@
+// variable scss
+@import "../../../theme/variables.scss";
+
+.header{
+    background: $bgPrimary;
+    color: $textSecondary;
+    font-weight: bold;
+}
+.sub-header{
+    padding: 5px 10px;
+    font-weight: bold;
+    border-bottom: 2px solid gainsboro;
+}
+.total-price-item{
+    font-weight: bold;
+    color: $textBlack;
+    font-size: 14px;
+}
+.cart-img{
+    margin: 0 10px 0 0;
+    width: 70px;
+    height: 70px;
+}
+.single-item{
+    margin-top: 8px;
+    width: 100%;
+}

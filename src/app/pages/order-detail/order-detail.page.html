@@ -1,0 +1,50 @@
+<app-header search="YES" (handleSearch)="searchData($event)"></app-header>
+<ion-content>
+  <ion-row class="header ion-align-items-center">
+    <ion-col size="2" (click)="dismissModal()">
+      <ion-img src="../../../assets/back.png" class="back-icon"></ion-img>
+    </ion-col>
+    <ion-col>
+      <h2 class="p-0 m-0 title">ઓર્ડર વિશેની માહિતી</h2>
+    </ion-col>
+  </ion-row>
+  <ion-row class="after-header ion-align-items-center">
+    <ion-col>
+      <h5 class="p-0 m-0 title">તમારો ઓર્ડર</h5>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-item class="single-item" *ngFor="let orders of this.orderDetails">
+      <ion-thumbnail slot="start" class="cart-img">
+        <img src="{{this.orders.product_base_img}}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{this.orders.Product_name}}</h2>
+        <!-- <p>Total Kg : 400Kg</p> -->
+        <p>વસ્તુ : {{this.orders.qty}}</p>
+        <p>ભાવ: &#8377;{{this.orders.unit_price}}</p>
+        <p class="total-price-item" style="font-weight: bold;">કુલ : {{this.orders.qty}} * &#8377;{{this.orders.unit_price}} =
+          &#8377;{{this.orders.qty * this.orders.unit_price}}</p>
+      </ion-label>
+      <ion-button color="secondary">
+        {{this.orders.qty}} વસ્તુ 
+      </ion-button>
+    </ion-item>
+
+  </ion-row>
+</ion-content>
+
+<ion-footer class="io-padding">
+  <ion-row class="text-center">
+    <ion-col>
+      <ion-button color="secondary">
+         કુલ રુપિયા ={{this.total_amount}}
+      </ion-button>
+    </ion-col>  
+    <ion-col (click)="reOrder()">
+      <ion-button color="secondary">
+        <ion-icon name="cart"></ion-icon> ફરી ઓર્ડર કરો
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

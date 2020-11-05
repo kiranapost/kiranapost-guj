@@ -1,0 +1,43 @@
+<app-header search="YES" (handleSearch)="searchData($event)"></app-header>
+<ion-content>
+  <ion-row class="header ion-align-items-center">
+    <ion-col size="2" (click)="dismissModal()">
+      <ion-img src="../../../assets/back.png" class="back-icon"></ion-img>
+    </ion-col>
+    <ion-col>
+      <h2 class="p-0 m-0 title">Order Detail</h2>
+    </ion-col>
+  </ion-row>
+  <ion-row class="after-header ion-align-items-center">
+    <ion-col>
+      <h5 class="p-0 m-0 title">My Orders</h5>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+      <ion-item class="single-item">
+        <ion-thumbnail slot="start" class="cart-img">
+          <img src="{{this.orderDetails.product_base_img}}">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{this.orderDetails.Product_name}}</h2>
+          <p>Total Kg : 400Kg</p>
+          <p>Qunatity : {{this.orderDetails.qty}} || <span>20Kg / 1Qt</span></p>
+          <p class="total-price-item">Total : {{this.orderDetails.qty}} * &#8377;{{this.orderDetails.unit_price}} = &#8377;{{this.orderDetails.qty * this.orderDetails.unit_price}}</p>
+        </ion-label>
+        <ion-button color="secondary">
+          {{this.orderDetails.qty}} items
+        </ion-button>
+      </ion-item>
+   
+  </ion-row>
+</ion-content>
+
+<ion-footer class="io-padding">
+  <ion-row class="text-center">
+    <ion-col (click)="reOrder()">
+      <ion-button color="secondary">
+        <ion-icon name="cart"></ion-icon> Re-order
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

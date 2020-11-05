@@ -1,0 +1,36 @@
+  ion-toolbar {
+      // border-bottom: 1px solid $textBlack;
+      --background: #83ffd8 !important;
+      // color: $textBlack;
+      padding: 20px;
+
+      .profile-pic-img {
+          width: 80px;
+          height: 80px;
+          border-radius: 100%;
+          display: block;
+          margin: auto;
+      }
+
+      .profile-name {
+          margin: 5px auto;
+      }
+  }
+
+  ion-content {
+      --background: #83ffd8 !important;
+
+      .ion-list {
+          margin: 0 !important;
+          background: transparent !important;
+
+          ion-item {
+              // border-bottom: 1px solid $textBlack !important;
+              // color: $textBlack !important;
+              --background: #83ffd8 !important;
+              --border-color: transparent !important;
+              font-weight: bold;
+              font-size: 18px;
+          }
+      }
+  }

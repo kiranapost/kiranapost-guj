@@ -1,0 +1,41 @@
+<app-header search="NO" (handleSearch)="searchData($event)"></app-header>
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-no-padding">
+    <ion-slides pager="true" [options]="slideOpts">
+      <!-- <ion-slide>
+        <div class="banner">
+          <div class="greetings">
+            <h3>Welcome..!</h3>
+            <p>Alpesh Kirana Store</p>
+          </div>
+        </div>
+      </ion-slide> -->
+      <ion-slide> 
+          <img src="../../../assets/image/offer/welcome.png"/>
+      </ion-slide>
+      <ion-slide>
+          <img src="../../../assets/image/offer/first-slider.png"/>
+      </ion-slide>
+      <ion-slide>
+          <img src="../../../assets/image/offer/second-slider.png"/>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+  <div class="cards"> 
+    <ion-row class="ion-margin" >
+      <ion-col size="6" *ngFor="let categoryItems of this.homeData" (click)="subCategoryDetails(categoryItems)">
+        <ion-card >
+          <div class="product-card">
+            <!-- <div class="badge">Hot</div> -->
+            <div class="product-tumb">
+              <img src={{categoryItems.category_icon}} alt="icon">
+            </div>
+            <div class="product-details">
+              <h5 class="text-center">{{categoryItems.category_name}}</h5>
+            </div>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
